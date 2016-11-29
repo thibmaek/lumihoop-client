@@ -13,6 +13,7 @@
     "node": "7.2.0"
   },
   "dependencies": {
+    "api-helper": "duivvv/api-helper",
     "dotenv": "^2.0.0",
     "forever": "^0.15.2",
     "glob": "^7.1.1",
