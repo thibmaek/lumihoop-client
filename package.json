@@ -20,21 +20,22 @@
     "eslint-loader": "^1.5.0",
     "extract-text-webpack-plugin": "beta",
     "file-loader": "^0.9.0",
-    "lodash": "^4.16.4",
     "html-loader": "^0.4.4",
     "image-webpack-loader": "^3.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "local-web-server": "^1.2.6",
+    "lodash": "^4.16.4",
     "postcss-cssnext": "^2.8.0",
     "postcss-loader": "^1.0.0",
     "postcss-reporter": "^1.4.1",
     "react-dev-utils": "^0.3.0",
-    "webpack-dev-server": "beta",
-    "local-web-server": "^1.2.6",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "stylelint": "^7.5.0",
     "stylelint-config-devine": "^1.0.0",
     "url-loader": "^0.5.7",
     "webpack": "beta",
-    "webpack-config-htmls": "^1.0.1"
+    "webpack-config-htmls": "^1.0.1",
+    "webpack-dev-server": "beta"
   }
 }

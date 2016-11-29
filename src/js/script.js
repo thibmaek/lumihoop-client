@@ -1,7 +1,10 @@
+// import fetch from 'isomorphic-fetch';
+
 const init = () => {
-
-  console.log('Hello Boilerplate')
-
+  document.addEventListener(`touchend`, e => {
+    const touch = e.changedTouches[0];
+    console.log(`x: ${touch.pageX}, y: ${touch.pageY}`);
+  });
 };
 
 init();
