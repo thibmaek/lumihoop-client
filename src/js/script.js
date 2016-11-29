@@ -1,22 +1,17 @@
-// import fetch from 'isomorphic-fetch';
-
 const init = () => {
-  const canvas = document.getElementById(`canvas`);
+  const canvas = document.querySelector(`.canvas`);
 
-  canvas.addEventListener(`gestureend`, e => {
-    console.log(`scale: ${e.scale}`);
-    console.log(e);
+  canvas.addEventListener(`gesturechange`, e => {
+    const { pageX, pageY, scale } = e;
+    const ctx = canvas.getContext(`2d`);
 
-    // const data = {
-    //   x,
-    //   y,
-    //   scale
-    // };
-    //
-    // fetch(`https://<url>`, {
-    //   method: `POST`,
-    //   body: data,
-    // });
+    ctx.beginPath();
+    ctx.arc(pageX, pageY, scale * 100, 0, Math.PI * 2, false);
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = `#ff69b4`;
+    ctx.stroke();
+
+    console.log(pageX, pageY);
   });
 };
 
