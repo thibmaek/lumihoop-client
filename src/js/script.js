@@ -1,9 +1,22 @@
 // import fetch from 'isomorphic-fetch';
 
 const init = () => {
-  document.addEventListener(`touchend`, e => {
-    const touch = e.changedTouches[0];
-    console.log(`x: ${touch.pageX}, y: ${touch.pageY}`);
+  const canvas = document.getElementById(`canvas`);
+
+  canvas.addEventListener(`gestureend`, e => {
+    console.log(`scale: ${e.scale}`);
+    console.log(e);
+
+    // const data = {
+    //   x,
+    //   y,
+    //   scale
+    // };
+    //
+    // fetch(`https://<url>`, {
+    //   method: `POST`,
+    //   body: data,
+    // });
   });
 };
 
