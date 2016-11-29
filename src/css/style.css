@@ -2,9 +2,26 @@
 
 body {
   background-color: #000;
+  color: white;
+  font-size: 3em;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 canvas {
   height: 100vh;
   width: 100vw;
+}
+
+.warning-landscape { display: none; }
+
+@media only screen and (orientation: portrait) {
+
+  .canvas { display: none; }
+
+  .warning-landscape { display: block; }
+}
+
+@media only screen and (orientation: landscape) {
+
+  .warning-landscape { display: none; }
 }
