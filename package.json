@@ -2,10 +2,27 @@
   "name": "lumihoop",
   "version": "0.1.0",
   "scripts": {
-    "development": "npm run clean && NODE_ENV=development webpack-dev-server --open",
-    "serve": "ws -d ./dist -c -p 3000 ",
-    "clean": "rimraf ./dist",
+    "development": "npm run clean && nodemon . & NODE_ENV=development webpack --watch",
+    "start": "npm run serve",
+    "serve": "forever .",
+    "clean": "rimraf ./server/public/",
     "production": "npm run clean && NODE_ENV=production webpack -p"
+  },
+  "main": "server/index.js",
+  "engines": {
+    "node": "7.2.0"
+  },
+  "dependencies": {
+    "api-helper": "duivvv/api-helper",
+    "dotenv": "^2.0.0",
+    "forever": "^0.15.2",
+    "glob": "^7.1.1",
+    "hapi": "^15.1.1",
+    "inert": "^4.0.2",
+    "joi": "^9.2.0",
+    "joi-objectid": "^2.0.0",
+    "lodash": "^4.16.4",
+    "nodemon": "^1.11.0"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
