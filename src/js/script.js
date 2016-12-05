@@ -1,4 +1,9 @@
+import io from 'socket.io-client';
+
+const socket = io(`/`);
+
 const init = () => {
+
   document.addEventListener(`touchmove`, e => {
     e.preventDefault();
   });
@@ -21,6 +26,14 @@ const init = () => {
     requestAnimationFrame();
   });
 
+  canvas.addEventListener(`gestureend`, e => {
+    const { pageX, pageY, scale } = e;
+
+    socket.emit(`hoopPlaced`, { pageX, pageY, scale });
+  });
+
 };
+
+
 
 init();
