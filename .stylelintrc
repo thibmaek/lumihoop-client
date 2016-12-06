@@ -3,5 +3,8 @@
     "./server/public/**/*.css",
     "./src/css/reset.css"
   ],
-  "extends": "stylelint-config-devine"
+  "extends": "stylelint-config-devine",
+  "rules": {
+    "rule-nested-empty-line-before": ["always", { except: ["first-nested"] }]
+  }
 }

@@ -13,16 +13,43 @@ canvas {
   width: 100vw;
 }
 
-.warning-landscape { display: none; }
+.is-hidden { display: none; }
+
+.alert {
+  background-color: #333;
+  border-radius: 10px;
+  font-family: monospace;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+
+  & h1 {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.circle-is-placed {
+  & img {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.device-is-landscape { display: none; }
 
 @media only screen and (orientation: portrait) {
-
   .canvas { display: none; }
 
-  .warning-landscape { display: block; }
+  .device-is-landscape { display: block; }
 }
 
 @media only screen and (orientation: landscape) {
-
-  .warning-landscape { display: none; }
+  .device-is-landscape { display: none; }
 }
