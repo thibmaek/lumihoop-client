@@ -7,9 +7,9 @@ module.exports.register = (server, options, next) => {
       console.log({ pageX, pageY, scale });
     });
 
-    socket.on(`detectHit`, () => {
-      io.emit(`newTurn`);
-    });
+    socket.on(`detectHit`, () => io.emit(`newTurn`));
+
+    socket.on(`debug`, data => console.log(data));
   });
 
   next();
