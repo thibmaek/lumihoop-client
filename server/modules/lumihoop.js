@@ -6,6 +6,10 @@ module.exports.register = (server, options, next) => {
       io.emit(`drawHoop`, { pageX, pageY, scale });
       console.log({ pageX, pageY, scale });
     });
+
+    socket.on(`detectHit`, () => {
+      io.emit(`newTurn`);
+    });
   });
 
   next();
