@@ -38,11 +38,13 @@ const init = () => {
   });
 
   $canvas.addEventListener(`gestureend`, e => {
-    const { pageX, pageY, scale } = e;
-    socket.emit(`hoopPlaced`, { pageX, pageY, scale });
+    if (canPlaceHoop) {
+      const { pageX, pageY, scale } = e;
+      socket.emit(`hoopPlaced`, { pageX, pageY, scale });
 
-    $alert.classList.toggle(`is-hidden`);
-    canPlaceHoop = false;
+      $alert.classList.toggle(`is-hidden`);
+      canPlaceHoop = false;
+    }
   });
 
   socket.on(`newTurn`, handleWSNewTurn);
