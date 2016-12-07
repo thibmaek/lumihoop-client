@@ -4,6 +4,9 @@ import { colors, shape, minScale, scaleMultiplier } from './config.js';
 const socket = io(`/`);
 
 const init = () => {
+  //wacht op socket - bal in hoop
+  socket.on(`newTurn`, handleWSNewTurn);
+
   const canvas = document.querySelector(`.canvas`);
   canvas.setAttribute(`width`, window.innerWidth);
   canvas.setAttribute(`height`, window.innerHeight);
@@ -38,11 +41,13 @@ const init = () => {
     alert.classList.toggle(`is-hidden`);
 
     canPlaceHoop = false;
-    setTimeout(() => {
-      canPlaceHoop = true;
-      alert.classList.toggle(`is-hidden`);
-    }, 10000);
   });
+
+  //start nieuwe beurt
+  const handleWSNewTurn = () => {
+    canPlaceHoop = true;
+    alert.classList.toggle(`is-hidden`);
+  };
 
 };
 
