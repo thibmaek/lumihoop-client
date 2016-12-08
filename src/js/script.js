@@ -7,7 +7,7 @@ const $alert = document.querySelector(`.circle-is-placed`);
 const socket = io(`/`);
 let canPlaceHoop = true;
 
-const handleWSNewTurn = () => {
+const newTurn = () => {
   canPlaceHoop = true;
   $alert.classList.toggle(`is-hidden`);
 };
@@ -47,7 +47,7 @@ const init = () => {
     }
   });
 
-  socket.on(`newTurn`, handleWSNewTurn);
+  socket.on(`newTurn`, newTurn);
 };
 
 init();
