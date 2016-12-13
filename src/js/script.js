@@ -37,11 +37,12 @@ const init = () => {
     requestAnimationFrame();
   });
 
-  canvas.addEventListener(`gestureend`, e => {
-    const { pageX, pageY, scale } = e;
-    const relX = (pageX - (window.innerWidth / 2)) / (window.innerWidth / 2);
-    const relY = (pageY - (window.innerHeight / 2)) / (window.innerHeight / 2);
-    socket.emit(`hoopPlaced`, { relX, relY, scale });
+  $canvas.addEventListener(`gestureend`, e => {
+    if (canPlaceHoop) {
+      const { pageX, pageY, scale } = e;
+      const relX = (pageX - (window.innerWidth / 2)) / (window.innerWidth / 2);
+      const relY = (pageY - (window.innerHeight / 2)) / (window.innerHeight / 2);
+      socket.emit(`hoopPlaced`, { relX, relY, scale });
 
       $alert.classList.toggle(`is-hidden`);
       canPlaceHoop = false;
