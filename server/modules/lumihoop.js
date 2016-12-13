@@ -2,9 +2,9 @@ module.exports.register = (server, options, next) => {
   const io = require(`socket.io`)(server.listener);
 
   io.on(`connection`, socket => {
-    socket.on(`hoopPlaced`, ({ pageX, pageY, scale }) => {
-      io.emit(`drawHoop`, { pageX, pageY, scale });
-      console.log({ pageX, pageY, scale });
+    socket.on(`hoopPlaced`, ({ relX, relY, scale }) => {
+      io.emit(`drawHoop`, { relX, relY, scale });
+      console.log({ relX, relY, scale });
     });
 
     socket.on(`detectHit`, () => io.emit(`newTurn`));
