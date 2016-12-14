@@ -9,7 +9,7 @@ let canPlaceHoop = true;
 
 const newTurn = () => {
   canPlaceHoop = true;
-  $alert.classList.toggle(`is-hidden`);
+  $alert.classList.add(`is-hidden`);
 };
 
 const drawHoop = ({ pageX, pageY, scale }) => {
@@ -44,7 +44,7 @@ const init = () => {
       const relY = (pageY - (window.innerHeight / 2)) / (window.innerHeight / 2);
       socket.emit(`hoopPlaced`, { relX, relY, scale });
 
-      $alert.classList.toggle(`is-hidden`);
+      $alert.classList.remove(`is-hidden`);
       canPlaceHoop = false;
     }
   });
