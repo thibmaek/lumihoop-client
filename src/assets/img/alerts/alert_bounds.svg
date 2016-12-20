@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="642px" height="199px" viewBox="0 0 642 199" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Assets/Textures/alert_bounds</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <path d="M547.954584,81.7803822 C547.984738,81.1935699 548,80.6028253 548,80.0085183 L548,33.9914817 C548,15.2267396 532.779785,0 514.004698,0 L33.9953016,0 C15.228607,0 0,15.2185047 0,33.9914817 L0,80.0085183 C0,98.7732604 15.2202149,114 33.9953016,114 L514.004698,114 C522.125866,114 529.584466,111.150076 535.433115,106.395464 C542.358916,113.979509 560,114 560,114 C548.055994,107.099972 547.954584,97.7232338 547.954584,97.7232338 L547.954584,81.7803822 Z" id="path-2"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="3" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0862745098   0 0 0 0 1   0 0 0 0 1  0 0 0 0.6 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M6.58823529,52.3783784 C6.58823529,52.3783784 8.43334704,37.3705346 6.58823529,22.7013619 C5.13922939,11.1813454 0,0 0,0 L13.1764706,0 C13.1764706,0 16.6237424,10.0915155 15.3636906,20.109292 C13.3296247,36.2807047 6.58823529,52.3783784 6.58823529,52.3783784 Z" id="path-4"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-5">
+            <feMorphology radius="3" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0862745098   0 0 0 0 1   0 0 0 0 1  0 0 0 0.6 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <ellipse id="path-6" cx="4.70588235" cy="63.4054054" rx="4.70588235" ry="4.59459459"></ellipse>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-7">
+            <feMorphology radius="3" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0862745098   0 0 0 0 1   0 0 0 0 1  0 0 0 0.6 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Textures" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Assets/Textures/alert_bounds">
+            <g id="Group" transform="translate(41.000000, 43.000000)">
+                <g id="Bubble" transform="translate(280.000000, 57.000000) scale(-1, 1) translate(-280.000000, -57.000000) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use stroke-opacity="0.9" stroke="#16FFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xlink:href="#path-2"></use>
+                    <use stroke="url(#linearGradient-1)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" xlink:href="#path-2"></use>
+                </g>
+                <g id="Group-2" transform="translate(92.000000, 26.000000)" font-family="Menlo-Bold, Menlo" fill="#16FFFF" font-weight="bold">
+                    <text id="Opgepast" font-size="24" letter-spacing="-0.338823527">
+                        <tspan x="0" y="22">Opgepast</tspan>
+                    </text>
+                    <text id="Teken-je-cirkel-niet" font-size="17" letter-spacing="-0.239999995">
+                        <tspan x="0" y="63">Teken je cirkel niet buiten het speelveld.</tspan>
+                    </text>
+                </g>
+                <g id="Exclamation-Mark" transform="translate(43.000000, 26.000000)">
+                    <g id="Group">
+                        <g id="Triangle">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                            <use stroke-opacity="0.9" stroke="#16FFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xlink:href="#path-4"></use>
+                            <use stroke="url(#linearGradient-1)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" xlink:href="#path-4"></use>
+                        </g>
+                        <g id="Oval">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                            <use stroke-opacity="0.9" stroke="#16FFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xlink:href="#path-6"></use>
+                            <use stroke="url(#linearGradient-1)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" xlink:href="#path-6"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

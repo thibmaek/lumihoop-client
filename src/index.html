@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
+  <meta charset='UTF-8'>
   <title>Lumihoop</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/icons/Icon-76.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/img/icons/Icon-76@2x.png">
-  <link rel="apple-touch-icon" sizes="167x167" href="assets/img/icons/Icon-83.5@2x.png">
+  <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'/>
+  <meta name='apple-mobile-web-app-capable' content='yes'>
+  <link rel='apple-touch-icon' sizes='76x76' href='assets/img/icons/Icon-76.png'>
+  <link rel='apple-touch-icon' sizes='152x152' href='assets/img/icons/Icon-76@2x.png'>
+  <link rel='apple-touch-icon' sizes='167x167' href='assets/img/icons/Icon-83.5@2x.png'>
 </head>
 <body>
-  <!-- 2048-by-1536-pixel resolution -->
-  <canvas class="canvas"></canvas>
-  <div class="alert circle-is-placed is-hidden">
-    <img src="assets/img/lumihoop-logo@2x.png" alt="Lumihoop logo">
+  <canvas class='canvas'></canvas>
+  <div class='notification notification-bounds is-hidden'>
+    <img src='assets/img/alerts/alert_bounds.svg' alt='Out of bounds alert' width='80%'>
+  </div>
+  <div class='notification notification-scale is-hidden'>
+    <img src='assets/img/alerts/alert_scale.svg' alt='Scale alert' width='80%'>
+  </div>
+  <div class='alert circle-is-placed is-hidden'>
+    <img src='assets/img/lumihoop-logo@2x.png' alt='Lumihoop logo'>
     <article>
       <h1>Goeie zet!</h1>
       <p>Je cirkel werd geplaatst<br/>Werp de bal in de ring</p>
     </article>
   </div>
-  <div class="alert device-is-landscape">Rotate the device</div>
+  <div class='alert device-is-landscape'>Rotate the device</div>
 </body>
 </html>
