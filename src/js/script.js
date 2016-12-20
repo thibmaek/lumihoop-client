@@ -1,29 +1,38 @@
 import io from 'socket.io-client';
+const socket = io(`/`);
+
 import { colors, shape, minScale, scaleMultiplier } from './config.js';
 
 const $canvas = document.querySelector(`.canvas`);
 const $alert = document.querySelector(`.circle-is-placed`);
+const ctx = $canvas.getContext(`2d`);
 
-const socket = io(`/`);
 let canPlaceHoop = true;
 
 const newTurn = () => {
   canPlaceHoop = true;
   $alert.classList.add(`is-hidden`);
+  ctx.fillRect(0, 0, $canvas.width, $canvas.height);
 };
 
 const drawHoop = ({ pageX, pageY, scale }) => {
-  const ctx = $canvas.getContext(`2d`);
+  const naturalScale = scale * scaleMultiplier;
+
   ctx.fillRect(0, 0, $canvas.width, $canvas.height);
   ctx.fill = colors.bg;
   ctx.beginPath();
-  ctx.arc(pageX, pageY, scale * scaleMultiplier, 0, Math.PI * 2, false);
+  ctx.arc(pageX, pageY, naturalScale, 0, Math.PI * 2, false);
   ctx.lineWidth = shape.stroke;
   ctx.strokeStyle = colors.pink;
   ctx.stroke();
 
   ctx.shadowBlur = shape.glow;
   ctx.shadowColor = colors.pink;
+
+  if (pageX - naturalScale < 0 || pageX + naturalScale > window.innerWidth ||
+    pageY - naturalScale < 0 || pageY + naturalScale > window.innerHeight) {
+    // stop movement & scaling
+  }
 };
 
 const init = () => {
