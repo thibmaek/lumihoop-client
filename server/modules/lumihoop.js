@@ -15,7 +15,7 @@ module.exports.register = (server, options, next) => {
     socket.on(`detectHit`, () => io.emit(`newTurn`));
 
     socket.on(`disconnect`, () => {
-      io.emit(`clientsChanged`, { clients: clients += 1 });
+      io.emit(`clientsChanged`, { clients: clients -= 1 });
       console.log(clients);
     });
 
