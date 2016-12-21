@@ -69,6 +69,7 @@ const init = () => {
 
       canDraw = false;
       $alert.classList.remove(`is-hidden`);
+      stopEmit = true;
     }
   });
 
