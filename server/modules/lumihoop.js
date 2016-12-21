@@ -1,11 +1,11 @@
 module.exports.register = (server, options, next) => {
   const io = require(`socket.io`)(server.listener);
-  let clients = [];
+
+  let clients = 0;
 
   io.on(`connection`, socket => {
-    const client = { id: socket.id };
-    clients.push(client);
-    socket.emit(`clientsChanged`, clients);
+    socket.emit(`clientsChanged`, clients += 1);
+    console.log(clients);
 
     socket.on(`hoopPlaced`, ({ relX, relY, scale }) => {
       io.emit(`drawHoop`, { relX, relY, scale });
@@ -14,12 +14,12 @@ module.exports.register = (server, options, next) => {
 
     socket.on(`detectHit`, () => io.emit(`newTurn`));
 
-    socket.on(`debug`, data => console.log(data));
-  });
+    socket.on(`disconnect`, () => {
+      io.emit(`clientsChanged`, clients -= 1);
+      console.log(clients);
+    });
 
-  io.on(`disconnect`, socket => {
-    clients = clients.filter(c => c.id !== socket.id);
-    socket.emit(`clientsChanged`, clients);
+    socket.on(`debug`, data => console.log(data));
   });
 
   next();
