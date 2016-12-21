@@ -4,7 +4,7 @@ module.exports.register = (server, options, next) => {
   let clients = 0;
 
   io.on(`connection`, socket => {
-    socket.emit(`clientsChanged`, clients += 1);
+    socket.emit(`clientsChanged`, { clients: clients += 1 });
     console.log(clients);
 
     socket.on(`hoopPlaced`, ({ relX, relY, scale }) => {
@@ -15,7 +15,7 @@ module.exports.register = (server, options, next) => {
     socket.on(`detectHit`, () => io.emit(`newTurn`));
 
     socket.on(`disconnect`, () => {
-      io.emit(`clientsChanged`, clients -= 1);
+      io.emit(`clientsChanged`, { clients: clients += 1 });
       console.log(clients);
     });
 
